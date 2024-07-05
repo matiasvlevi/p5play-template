@@ -279,7 +279,6 @@ async function draw() {
 
 		// Enemy take damage
 		proj.collides(slime, async () => {
-			// Enemy take damage
 			slime.moveAway(player, 0.6);
 			await slime.changeAni('hurt');
 			slime.remove();
