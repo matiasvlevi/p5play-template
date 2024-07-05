@@ -192,7 +192,7 @@ async function draw() {
 
 	// Player Jump
 	if (
-		kb.pressing(UP_ARROW) &&
+		kb.pressing('up') &&
 		player.colliding(tiles) &&
 		player.jumpTimer >= player.jumpCoolDown // Cooldown is optional, added for edge cases
 	) {
