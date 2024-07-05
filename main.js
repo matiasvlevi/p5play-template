@@ -41,6 +41,18 @@ function setup() {
 	dirt.addAni({ w: 16, h: 16, row: 1, col: 0 });
 	dirt.tile = 'd';
 
+	rocks = new Group();
+	rocks.collider = 'static';
+	rocks.bounciness = 0.1;
+	rocks.width = 12;
+	rocks.height = 12;
+	rocks.debug = true;
+	rocks.friction = 0.1;
+	rocks.drag = 0;
+	rocks.spriteSheet = worldTiles;
+	rocks.addAni({ w: 16, h: 16, row: 0, col: 1 });
+	rocks.tile = 'r';
+
 	grass = new Group();
 	grass.collider = 'static';
 	grass.bounciness = 0.1;
@@ -315,6 +327,14 @@ async function draw() {
 			0, 0,
 			16, 16
 		);
+	}
+	
+	// Breakable rock blocks
+	for (let rock of rocks) {
+		if (player.collides(rock)){
+			await delay(200)
+			rock.collider = 'dynamic';
+		}
 	}
 
 	// HUD

@@ -1,4 +1,4 @@
-const map1 = [
+let map1 = [
 	'                                                              ',
 	'                                                              ',
 	'                         l f                                  ',
@@ -14,13 +14,13 @@ const map1 = [
 	'   gddddg      F    H    ddddddddddddg                      H ',
 	'  cc    Fc     ggg  H     dddddddddddddd              ccccc H ',
 	'gggg   ggggg        H                      l          gggggggg',
-	'ddddgggdddddggccFcccggggg             l   gggccFcccgggdddddddd',
-	'ddddddddddddddggggggddddddd          gggggdddggggggddddddddddd',
-	'ddddddddddddddddddddddddddddddd            ddddddddddddddddddd',
-	'dddddddddddddddddddddddddddddddddd            dddddddddddddddd',
-	'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-	'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-	'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-	'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-	'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
+	'ddddgggdddddggccFcccgggggrrrrrrrrrrrrr    gggccFcccgggdddddddd',
+	'ddddddddddddddggggggddddd            gggggdddggggggddddddddddd',
+	'ddddddddddddddddddddddddd                  ddddddddddddddddddd',
+	'ddddddddddddddddddddddddd                     dddddddddddddddd',
+	'ddddddddddddddddddddddddd             dddddddddddddddddddddddd',
+	'ddddddddddddddddddddddddd             dddddddddddddddddddddddd',
+	'ddddddddddddddddddddddddd             dddddddddddddddddddddddd',
+	'ddddddddddddddddddddddddd             dddddddddddddddddddddddd',
+	'ddddddddddddddddddddddddd             dddddddddddddddddddddddd'
 ];
