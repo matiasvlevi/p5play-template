@@ -109,12 +109,15 @@ function setup() {
 	sign.spriteSheet = worldTiles;
 	sign.addAni({ w: 16, h: 16, row: 3, col: 8 });
 	sign.tile = 'S';
+	sign.message = 'Take the purple bottle to win';
 
 	sign2 = new Group();
 	sign2.collider = 'none';
 	sign2.spriteSheet = worldTiles;
 	sign2.addAni({ w: 16, h: 16, row: 3, col: 8 });
 	sign2.tile = '9';
+	sign2.message = 'Press the down arrow to roll mid-air';
+
 
 	// // Generate a procedural map
 	// let proceduralMap = mapGenerator(18, 16 * 4, 16);
@@ -344,8 +347,8 @@ async function draw() {
 	// Sign HUD tooltip 1
 	if (player.overlapping(sign)) {
 		push()
-		textAlign(CENTER)
-		text('Take the purple bottle to win', canvas.hw, canvas.hh - 16);
+		textAlign(CENTER);
+		text(sign.message, canvas.hw, canvas.hh - 16);
 		pop()
 	}
 
@@ -353,9 +356,10 @@ async function draw() {
 	if (player.overlapping(sign2)) {
 		push()
 		textAlign(CENTER)
-		text('Press the down arrow to roll mid-air', canvas.hw + 32, canvas.hh - 16);
+		text(sign2.message, canvas.hw + 32, canvas.hh - 16);
 		pop()
 	}
+
 
 	text('Score: ' + player.score, 10, 10);
 	text('Vies: ' + player.lives, 10, 20);
