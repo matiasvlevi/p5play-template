@@ -245,11 +245,16 @@ async function draw() {
 
 	// Player Shoot projectiles
 	if (kb.pressed('e')) {
-		let proj = new Sprite(player.x, player.y);
+		let proj = new Sprite();
+
 		proj.d = 3;
 		proj.color = color(255, 78, 0);
-		proj.direction = player.mirror.x ? -180 : 0;
-		proj.speed = 12;
+
+		//					Offset to avoid colliding with player's hitbox
+		proj.x = player.x + (player.mirror.x ? -10 : 10);
+		proj.y = player.y;
+
+		proj.vel.x = player.mirror.x ? -12 : 12;
 
 		proj.collides(tiles, () => proj.remove());
 		proj.collides(slime, async () => {
