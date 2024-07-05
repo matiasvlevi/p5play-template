@@ -271,7 +271,13 @@ async function draw() {
 
 		proj.vel.x = player.mirror.x ? -12 : 12;
 
-		proj.collides(tiles, () => proj.remove());
+		// remove proj if touches tiles (the map)
+		proj.collides(tiles, async () => {
+			await delay(1000);
+			proj.remove()
+		});
+
+		// Enemy take damage
 		proj.collides(slime, async () => {
 			// Enemy take damage
 			slime.moveAway(player, 0.6);
