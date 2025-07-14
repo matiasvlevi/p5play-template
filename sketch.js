@@ -1,7 +1,3 @@
-function preload() {
-
-}
-
 function setup() {
 	new Canvas(innerWidth, innerHeight);
 }
